@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\DashboardPostController;
+use App\Http\Controllers\ProdukController;
 
 
 Route::get('/', function () {
@@ -19,6 +20,11 @@ Route::post('/login', [LoginController::class, 'authenticate']
 );
 Route::post('/logout', [LoginController::class, 'logout']
 );
+
+
+Route::resource('/Products', ProdukController::class)
+-> middleware(('auth'));
+
 Route::get('/Member', [RegisterController::class, 'index']
 )-> middleware('guest');
 
@@ -28,6 +34,11 @@ Route::get('/dashboard', function (){
     return view('dashboard.index');
 })->middleware('auth');
 
-Route::resource('/dashboard/posts', DashboardPostController::class)
--> middleware(('auth'));
+Route::delete('/dashboard/posts/{produk}', [DashboardPostController::class, 'destroy']);
+
+Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
+
+
+
+
 // Route::post('/login', [LoginController::class, 'authenticate'])->name('login');

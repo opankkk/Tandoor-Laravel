@@ -13,8 +13,9 @@ class ProdukController extends Controller
      */
     public function index()
     {
-        return view('dashboard.posts.index', [
-            'posts' => Produk::where('user_id', auth()->user()->id)->get()
+        $produk = Produk::all();
+        return view('Product', [
+           'produks' => $produk
         ]);
         
     }
@@ -32,7 +33,7 @@ class ProdukController extends Controller
      */
     public function store(StoreprodukRequest $request)
     {
-        return $request;
+            
     }
 
     /**

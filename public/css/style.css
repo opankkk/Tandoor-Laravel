@@ -3,11 +3,19 @@
 
 
 .home-bg{
-   background-image: url('aset/home-bg');
+   background-image: url('../aset/home-bg.jpg');
    background-size: cover;
    background-position: center;
 }
+.home-category {
+   text-align: center; 
+   margin: auto;
+   background-image: white;
+   }
 
+section .home-category{
+   background-image:url('../aset/light_bg.png')
+}
 .home-bg .home{
    display: flex;
    align-items: center;
@@ -783,19 +791,19 @@
 
 }
 
-* {
+/* * {
     text-decoration: none;
     margin: 0px;
     padding: 0px;
     font-family: "Poppins";
 
     
-}
+} */
 
-body {
+/* body {
     margin: 0px;
     padding: 0px;
-}
+} */
 
 .wrapper {
     width: 100%; 

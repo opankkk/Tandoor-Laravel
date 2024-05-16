@@ -20,19 +20,24 @@ html{
   overflow-x: hidden;
 }
 
-body{
-background-image: url('../aset/bg_logg.jpg');
-background-repeat: no-repeat;
-background-size: cover;
+
+.section {
+    background-image: url('../aset/bg_logg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center; 
+    min-height: 100vh; 
+
+
 }
 
-.container{
+.containerPro{
   max-width: 1200px;
   margin:0 auto;
   padding:3rem 2rem;
 }
 
-.container .title{
+.containerPro .title{
   font-size: 3.5rem;
   color:#444;
   margin-bottom: 3rem;
@@ -40,13 +45,13 @@ background-size: cover;
   text-align: center;
 }
 
-.container .products-container{
+.containerPro .products-container{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap:2rem;
 }
 
-.container .products-container .product{
+.containerPro .products-container .product{
   text-align: center;
   padding:3rem 2rem;
   background: #ffffff;
@@ -56,30 +61,30 @@ background-size: cover;
   cursor: pointer;
 }
 
-.container .products-container .product:hover{
+.containerPro .products-container .product:hover{
   outline: .2rem solid #00541A;
   outline-offset: 0;
 }
 
-.container .products-container .product img{
+.containerPro .products-container .product img{
   height: 25rem;
 }
 
-.container .products-container .product:hover img{
+.containerPro .products-container .product:hover img{
   transform: scale(.9);
 }
 
-.container .products-container .product h2{
+.containerPro .products-container .product h2{
   padding:.5rem 0;
   font-size: 2rem;
   color:#00541A;
 }
 
-.container .products-container .product:hover h2{
+.containerPro .products-container .product:hover h2{
   color:#00541A;
 }
 
-.container .products-container .product .price{
+.containerPro .products-container .product .price{
   font-size: 2rem;
   color:#00541A;
 }

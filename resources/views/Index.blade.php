@@ -11,10 +11,11 @@
     <link rel="stylesheet" href="/css/components.css">
     <link rel="stylesheet" href="/css/StyleLog.css">
     <link rel="stylesheet" href="/css/StyleReg.css">
+    <link rel="stylesheet" href="/css/StylePro.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <style>
+    {{-- <style>
       .home-category {
       text-align: center; 
       margin: auto;
@@ -28,7 +29,7 @@
          background-size: cover;
          background-position: center;
       }
-    </style>
+    </style> --}}
   
 </head>
 <body>  
@@ -40,6 +41,7 @@
 @yield('Login')
 @yield('Member')
 @yield('/Dashboard')
+@yield('Products')
 
 <script src="js/script.js"></script>
  
