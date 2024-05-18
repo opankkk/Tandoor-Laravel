@@ -8,16 +8,18 @@ use App\Models\Produk;
 
 class ProdukSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
-    public function run(): void
-    {
-        Produk::create([
-            'user_id' => 1,
-            'nama_produk' => 'Tomat',
-            'harga' => 'Rp.10.000',
-            'deskripsi' => 'Tomat Merah'
-        ]);
+  /**
+   * Run the database seeds.
+   */
+  public function run(): void
+  {
+    for ($i = 1; $i <= 5; $i++) {
+      Produk::create([
+        'user_id' => $i,
+        'nama_produk' => 'Produk ' . $i,
+        'harga' => 10000.00,
+        'deskripsi' => 'Deskripsi Produk ' . $i
+      ]);
     }
+  }
 }

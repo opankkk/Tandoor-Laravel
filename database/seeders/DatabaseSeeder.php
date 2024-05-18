@@ -2,22 +2,48 @@
 
 namespace Database\Seeders;
 
+use App\Models\Order;
+use App\Models\Produk;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
-    public function run(): void
-    {
-        // User::factory(10)->create();
+  /**
+   * Seed the application's database.
+   */
+  public function run(): void
+  {
+    // User::factory(10)->create();
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+    User::factory()->create([
+      'name' => 'admin',
+      'email' => 'admin@gmail.com',
+      'password' => Hash::make('88888888')
+    ]);
+
+    for ($i = 1; $i <= 5; $i++) {
+      Produk::create([
+        'user_id' => $i,
+        'nama_produk' => 'Produk ' . $i,
+        'harga' => floor(rand(10000, 100000) / 1000) * 1000,
+        'deskripsi' => 'Deskripsi Produk ' . $i
+      ]);
     }
+
+    $users = User::all();
+    $products = Produk::all();
+
+    // foreach ($users as $user) {
+    //   foreach ($products as $product) {
+    //     Order::create([
+    //       'user_id' => $user->id,
+    //       'product_id' => $product->id,
+    //       // Add other fields as necessary
+    //     ]);
+    //   }
+    // }
+  }
 }
