@@ -26,12 +26,17 @@ class OrdersController extends Controller
 
   public function index()
   {
-    // dd(Order::with(['user'])->where('user_id', auth()->id())->get()->toArray());
     $orders = Order::with(['user', 'product'])->where('user_id', auth()->id())->get();
-    // dd($orders->toArray());
 
     return view('orders', [
       'orders' => $orders,
     ]);
+  }
+
+  public function destroy(Order $order)
+  {
+    $order->delete();
+
+    return redirect('/dashboard/orders')->with('success', 'Product has been deleted!');
   }
 }

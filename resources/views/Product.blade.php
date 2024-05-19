@@ -4,8 +4,9 @@
 
 <div class="section">
   @if (session('success'))
-  <div class="alert alert-info" role="alert">
+  <div class="alert" >
     {{ session('success') }}
+    <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
   </div>
   @endif
   <div class="containerPro">

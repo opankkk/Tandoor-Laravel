@@ -75,6 +75,33 @@ html {
 .containerPro .products-container .product:hover img {
   transform: scale(.9);
 }
+.alert {
+  background-color: #FEF9D9;
+  border: 1px solid #E6E6E6; /* Anda bisa mengubah warna sesuai keinginan */
+  color: #333333; /* Warna teks, bisa diubah sesuai keinginan */
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  font-family: Arial, sans-serif; /* Atau font lain yang diinginkan */
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.alert .close {
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #333333;
+  text-shadow: 0 1px 0 #FFFFFF;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.alert .close:hover {
+  color: #000000; /* Warna ikon 'close' saat dihover */
+}
+
 
 .containerPro .products-container .product h2 {
   padding: .5rem 0;

@@ -66,6 +66,9 @@ Route::get('/dashboard/posts/{id}/edit', [DashboardPostController::class, 'edit'
 Route::post('/dashboard/posts/{produk}', [DashboardPostController::class, 'update']);
 
 
+Route::get('/dashboard/orders', [OrdersController::class, 'index'])->name('orders.index');
+Route::delete('/dashboard/orders/{order}', [OrdersController::class, 'destroy'])->name('orders.destroy');
+
 
   
 // Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
