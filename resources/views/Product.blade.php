@@ -53,7 +53,7 @@
         <i class="fas fa-star-half-alt"></i>
         <span>( 250 )</span>
       </div>
-      <p>{{ $produk->deskripsi }}</p>
+      <p>{!! $produk->deskripsi !!}</p>
       <div class="price">
         <p>Rp. {{ number_format($produk->harga, 0, ',', '.') }}</p>
       </div>
