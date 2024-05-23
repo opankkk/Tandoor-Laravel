@@ -4,11 +4,19 @@
 
 <div class="section">
   @if (session('success'))
-  <div class="alert" >
+  <div class="alert">
     {{ session('success') }}
     <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
   </div>
   @endif
+
+  @if (session('error'))
+  <div class="alert error">
+    {{ session('error') }}
+    <span class="close" onclick="this.parentElement.style.display='none';">&times;</span>
+  </div>
+  @endif
+
   <div class="containerPro">
     <div class="products-container">
       @foreach ($produks as $produk)
@@ -45,7 +53,7 @@
         <i class="fas fa-star-half-alt"></i>
         <span>( 250 )</span>
       </div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+      <p>{{ $produk->deskripsi }}</p>
       <div class="price">
         <p>Rp. {{ number_format($produk->harga, 0, ',', '.') }}</p>
       </div>

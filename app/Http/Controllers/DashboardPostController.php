@@ -26,7 +26,7 @@ class DashboardPostController extends Controller
       'nama_produk' => 'required|max:225',
       'harga' => 'required|max:225',
       'deskripsi' => 'required',
-      'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg'
+      'image' => 'nullable|image|mimes:jpeg,png,jpg,gif'
     ]);
 
     if ($request->hasFile('image')) {
@@ -63,7 +63,7 @@ class DashboardPostController extends Controller
       'nama_produk' => 'required|max:225',
       'harga' => 'required|max:225',
       'deskripsi' => 'required',
-      'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg'
+      'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
     ]);
 
     if ($request->hasFile('image')) {

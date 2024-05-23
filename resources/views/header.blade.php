@@ -9,7 +9,9 @@
         <li><a href="/Products">Products</a></li>
         <li><a href="/about">About Us</a></li>
         @auth
+        @if(auth()->user()->role == 'admin')
         <li><a href="/dashboard">Dashboard</a></li>
+        @endif
         <div class="dropdown">
           <i class="fa-solid fa-user" style="color: #fef9d9;" class="profil-icon"></i>
           <div class="dropdown-content">

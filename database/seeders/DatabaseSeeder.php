@@ -18,20 +18,9 @@ class DatabaseSeeder extends Seeder
   {
     // User::factory(10)->create();
 
-    User::factory()->create([
-      'name' => 'admin',
-      'email' => 'admin@gmail.com',
-      'password' => Hash::make('88888888')
-    ]);
+    $this->call(UserSeeder::class);
 
-    for ($i = 1; $i <= 5; $i++) {
-      Produk::create([
-        'user_id' => $i,
-        'nama_produk' => 'Produk ' . $i,
-        'harga' => floor(rand(10000, 100000) / 1000) * 1000,
-        'deskripsi' => 'Deskripsi Produk ' . $i
-      ]);
-    }
+    $this->call(ProdukSeeder::class);
 
     $users = User::all();
     $products = Produk::all();
