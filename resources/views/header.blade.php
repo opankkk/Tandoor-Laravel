@@ -16,17 +16,17 @@
           <i class="fa-solid fa-user" style="color: #fef9d9;" class="profil-icon"></i>
           <div class="dropdown-content">
             <div class="list-dropdown">
-              <a href="/Profile">Profile</a>
-              <a href="/orders">Orders</a>
+              <a href="/Profile" style="font-weight: bold; color: #00541A;">Profile</a>
+              <a href="/orders" style="font-weight: bold; color: #00541A;">Orders</a>
               <form action="/logout" method="post" class="logout-btn">
                 @csrf
-                <button type="submit">Logout</button>
+                <button type="submit" >Logout</button>
               </form>
             </div>
           </div>
         </div>
         @else
-        <li><a href="/Login">Login</a></li>
+        <li><a href="/Login" style="font-weight: bold; color: #00541A;">Login</a></li>
         @endauth
       </ul>
     </div>

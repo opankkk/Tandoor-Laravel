@@ -18,7 +18,7 @@
          <img src="aset/about-img-2.png" alt="">
          <h3>what we provide?</h3>
          <p>Kami menyediakan produk sayuran populer, menjamin kualitasnya, dan memastikan ketersediaan dalam jumlah yang memadai</p>
-         <a href="shop.php" class="btn">our shop</a>
+         <a href="/Products   " class="btn">our shop</a>
       </div>
 
    </div>
