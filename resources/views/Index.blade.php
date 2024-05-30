@@ -15,24 +15,7 @@
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  {{-- <style>
-      .home-category {
-      text-align: center; 
-      margin: auto;
-      background-image: white;
-      }
-      section .home-category{
-         background-image:url('aset/light_bg.png')
-      }
-      .home-bg{
-         background-image: url('aset/home-bg.jpg');
-         background-size: cover;
-         background-position: center;
-      }
-    </style> --}}
-
 </head>
-
 <body>
   @include('header')
 
@@ -45,6 +28,7 @@
   @yield('Products')
   @yield('Profile')
   @yield('orders')
+  @yield('update')
 
   <script src="js/script.js"></script>
 

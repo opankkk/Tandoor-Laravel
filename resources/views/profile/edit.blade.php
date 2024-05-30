@@ -1,3 +1,82 @@
+@extends('Index')
+
+@section('update')
+<style>
+  .container {
+    background-image:url('../aset/light_bg.png');
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* Warna latar belakang untuk card */
+  .card {
+    background-color: #FEF9D9;
+    border: 1px solid #00541A;
+    border-radius: 8px;
+  }
+  
+  /* Warna untuk header card */
+  .card-header {
+    background-color: #00541A;
+    color: #FEF9D9;
+    font-size: 25;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  /* Warna untuk form labels */
+  .col-form-label {
+    color: #00541A;
+    font-weight: bold;
+  }
+  
+  /* Warna untuk input fields */
+  .form-control {
+    border: 1px solid #00541A;
+    border-radius: 4px;
+  }
+  
+  /* Warna untuk input fields ketika ada error */
+  .is-invalid {
+    border-color: #FF0000;
+  }
+  
+  /* Warna untuk invalid feedback */
+  .invalid-feedback {
+    color: #FF0000;
+  }
+  
+  /* Warna untuk tombol submit */
+  .btn-primary {
+    
+    background-color: #00541A;
+    border-color: #00541A;
+    color: #FEF9D9;
+    width: 200px; /* Set the width of the button */
+    display: block;
+    margin: 20px auto;
+    font-size: 15
+  }
+  
+  .btn-primary:hover {
+    border-color: #FEF9D9;
+    background-color: #F7E652;
+    color: black
+  }
+  
+  /* Margins and paddings for form groups */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group.row.mb-0 {
+    margin-bottom: 0;
+  }
+  
+</style>
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
@@ -10,7 +89,7 @@
             @method('PUT')
 
             <div class="form-group row">
-              <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
+              <label for="name" class="col-md col-form-label text-md-right">Name</label>
 
               <div class="col-md-6">
                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name', $user->name) }}" required autocomplete="name" autofocus>
@@ -73,3 +152,4 @@
   </div>
 </div>
 </div>
+@endsection
